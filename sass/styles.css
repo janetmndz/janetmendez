@@ -222,10 +222,11 @@
 
 .main-header .logo-image {
   width: 90%;
-  height: 100vh;
+  height: 55vh;
   margin: 0 auto;
-  background-image: url(../img/header.png);
+  background-image: url(../img/header1.png);
   background-size: contain;
+  background-position: top center;
   background-repeat: no-repeat;
 }
 
@@ -237,65 +238,105 @@
 
 @media screen and (max-width: 1026px) and (min-width: 758px) {
   .main-header .logo-image {
-    height: 75vh;
+    height: 40vh;
     max-height: 450px;
   }
 }
 
 @media screen and (max-width: 758px) {
   .main-header .logo-image {
-    height: 50vh;
+    height: 25vh;
     max-height: 300px;
     width: 100%;
   }
 }
 
-.main-header .logo-image .logo-title {
-  position: absolute;
+.main-header .logo-title {
+  position: relative;
   width: 50%;
-  bottom: 8%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
   background: #EC6950;
   padding: 3%;
 }
 
 @media screen and (max-width: 1026px) and (min-width: 758px) {
-  .main-header .logo-image .logo-title {
+  .main-header .logo-title {
     padding: 4%;
   }
 }
 
 @media screen and (max-width: 758px) {
-  .main-header .logo-image .logo-title {
+  .main-header .logo-title {
     padding: 2%;
     width: 70%;
   }
 }
 
-.main-header .logo-image .logo-title .inner-logo-tittle {
+.main-header .logo-title .inner-logo-tittle {
   margin: 0 auto;
   width: 90%;
 }
 
 @media screen and (max-width: 1026px) and (min-width: 758px) {
-  .main-header .logo-image .logo-title .inner-logo-tittle {
+  .main-header .logo-title .inner-logo-tittle {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 758px) {
-  .main-header .logo-image .logo-title .inner-logo-tittle {
+  .main-header .logo-title .inner-logo-tittle {
     width: 100%;
   }
 }
 
-.main-header .logo-image .logo-title .inner-logo-tittle span {
+.main-header .logo-title .inner-logo-tittle span {
   font-family: "Work Sans", sans-serif;
   display: block;
 }
 
-.main-header .logo-image .logo-title .inner-logo-tittle .title-main {
+.main-header .logo-title .inner-logo-tittle .title-logo {
+  position: relative;
+  background-image: url("../img/jmlogo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 10%;
+  height: 10vh;
+  margin: 0 auto 1.5em auto;
+}
+
+@media screen and (max-width: 1026px) and (min-width: 758px) {
+  .main-header .logo-title .inner-logo-tittle .title-logo {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 758px) {
+  .main-header .logo-title .inner-logo-tittle .title-logo {
+    width: 20%;
+  }
+}
+
+.main-header .logo-title .inner-logo-tittle .title-logo:before, .main-header .logo-title .inner-logo-tittle .title-logo:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 5vh;
+  height: 5vh;
+  border-left: 5px solid #faab11;
+  border-bottom: 5px solid #faab11;
+}
+
+.main-header .logo-title .inner-logo-tittle .title-logo:before {
+  animation: logo-left 1500ms;
+  transform: translateX(-75%) rotate(45deg);
+}
+
+.main-header .logo-title .inner-logo-tittle .title-logo:after {
+  animation: logo-right 1500ms;
+  transform: translateX(100%) rotate(225deg);
+}
+
+.main-header .logo-title .inner-logo-tittle .title-main {
   font-size: 4em;
   font-weight: 700;
   text-align: center;
@@ -303,18 +344,18 @@
 }
 
 @media screen and (max-width: 1026px) and (min-width: 758px) {
-  .main-header .logo-image .logo-title .inner-logo-tittle .title-main {
+  .main-header .logo-title .inner-logo-tittle .title-main {
     font-size: 3em;
   }
 }
 
 @media screen and (max-width: 758px) {
-  .main-header .logo-image .logo-title .inner-logo-tittle .title-main {
+  .main-header .logo-title .inner-logo-tittle .title-main {
     font-size: 1.5em;
   }
 }
 
-.main-header .logo-image .logo-title .inner-logo-tittle .title-sub {
+.main-header .logo-title .inner-logo-tittle .title-sub {
   font-size: 1.5em;
   color: #ffece7;
   text-align: center;
@@ -322,13 +363,13 @@
 }
 
 @media screen and (max-width: 1026px) and (min-width: 758px) {
-  .main-header .logo-image .logo-title .inner-logo-tittle .title-sub {
+  .main-header .logo-title .inner-logo-tittle .title-sub {
     font-size: 1.5em;
   }
 }
 
 @media screen and (max-width: 758px) {
-  .main-header .logo-image .logo-title .inner-logo-tittle .title-sub {
+  .main-header .logo-title .inner-logo-tittle .title-sub {
     font-size: 0.9em;
   }
 }
@@ -471,7 +512,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #333333;
+  background-color: #737373;
   margin: 0px .5em;
   position: relative;
   transition: 500ms ease all;
@@ -670,6 +711,30 @@
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes logo-left {
+  0% {
+    transform: translateX(-25%) rotate(45deg);
+  }
+  50% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(-75%) rotate(45deg);
+  }
+}
+
+@keyframes logo-right {
+  0% {
+    transform: translateX(75%) rotate(225deg);
+  }
+  50% {
+    transform: translateX(125%) rotate(225deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(225deg);
   }
 }
  

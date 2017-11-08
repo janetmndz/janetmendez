@@ -64,61 +64,86 @@
 	background: $header-color
 	.logo-image
 		width: 90%
-		height: 100vh
+		height: 55vh
 		margin: 0 auto
-		background-image: url(../img/header.png)
+		background-image: url(../img/header1.png)
 		background-size: contain
+		background-position: top center
 		background-repeat: no-repeat
 		@include web
 			max-height: 1900px
 		@include tablet
-			height: 75vh
+			height: 40vh
 			max-height: 450px
 		@include phone
-			height: 50vh
+			height: 25vh
 			max-height: 300px
 			width: 100%
-		.logo-title
-			position: absolute
-			width: 50%
-			bottom: 8%
-			left: 50%
-			transform: translateX(-50%)
-			background: $header-color
-			padding: 3%
+	.logo-title
+		position: relative
+		width: 50%
+		margin: 0 auto
+		background: $header-color
+		padding: 3%
+		@include tablet
+			padding: 4%
+		@include phone
+			padding: 2%
+			width: 70%
+		.inner-logo-tittle
+			margin: 0 auto
+			width: 90%
 			@include tablet
-				padding: 4%
+				width: 100%
 			@include phone
-				padding: 2%
-				width: 70%
-			.inner-logo-tittle
-				margin: 0 auto
-				width: 90%
+				width: 100%
+			span
+				font-family: $main-font
+				display: block
+			.title-logo
+				position: relative
+				background-image: url('../img/jmlogo.png')
+				background-size: contain
+				background-repeat: no-repeat
+				width: 10%
+				height: 10vh
+				margin: 0 auto 1.5em auto
 				@include tablet
-					width: 100%
+					width: 15%
 				@include phone
-					width: 100%
-				span
-					font-family: $main-font
+					width: 20%
+				&:before, &:after
+					content: ''
 					display: block
-				.title-main
-					font-size: 4em
-					font-weight: 700
-					text-align: center
-					color: $orange-colortwo
-					@include tablet
-						font-size: 3em
-					@include phone
-						font-size: 1.5em
-				.title-sub
+					position: absolute
+					width: 5vh
+					height: 5vh
+					border-left: 5px solid $orange-colortwo
+					border-bottom: 5px solid $orange-colortwo
+				&:before
+					animation: logo-left 1500ms
+					transform: translateX(-75%) rotate(45deg)
+				&:after
+					animation: logo-right 1500ms
+					transform: translateX(100%) rotate(225deg)
+			.title-main
+				font-size: 4em
+				font-weight: 700
+				text-align: center
+				color: $orange-colortwo
+				@include tablet
+					font-size: 3em
+				@include phone
 					font-size: 1.5em
-					color: $white-color
-					text-align: center
-					text-transform: uppercase;
-					@include tablet
-						font-size: 1.5em
-					@include phone
-						font-size: 0.9em
+			.title-sub
+				font-size: 1.5em
+				color: $white-color
+				text-align: center
+				text-transform: uppercase;
+				@include tablet
+					font-size: 1.5em
+				@include phone
+					font-size: 0.9em
 
 /*About Section Styles*/
 .about
@@ -196,7 +221,7 @@
 				width: 50px
 				height: 50px
 				border-radius: 50%
-				background-color: $black-color
+				background-color: lighten($black-color, 25%)
 				margin: 0px .5em
 				position: relative
 				transition: 500ms ease all
@@ -309,3 +334,18 @@
 	100%
 		transform: translateX(0)
 
+@keyframes logo-left
+	0%
+		transform: translateX(-25%) rotate(45deg)
+	50%
+		transform: translateX(-100%) rotate(45deg)
+	100%
+		transform: translateX(-75%) rotate(45deg)
+
+@keyframes logo-right
+	0%
+		transform: translateX(75%) rotate(225deg)
+	50%
+		transform: translateX(125%) rotate(225deg)
+	100%
+		transform: translateX(100%) rotate(225deg)
