@@ -238,7 +238,7 @@
 
 @media screen and (max-width: 1026px) and (min-width: 758px) {
   .main-header .logo-image {
-    height: 40vh;
+    height: 30vh;
     max-height: 450px;
   }
 }
@@ -292,48 +292,6 @@
 .main-header .logo-title .inner-logo-tittle span {
   font-family: "Work Sans", sans-serif;
   display: block;
-}
-
-.main-header .logo-title .inner-logo-tittle .title-logo {
-  position: relative;
-  background-image: url("../img/jmlogo.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 10%;
-  height: 10vh;
-  margin: 0 auto 1.5em auto;
-}
-
-@media screen and (max-width: 1026px) and (min-width: 758px) {
-  .main-header .logo-title .inner-logo-tittle .title-logo {
-    width: 15%;
-  }
-}
-
-@media screen and (max-width: 758px) {
-  .main-header .logo-title .inner-logo-tittle .title-logo {
-    width: 20%;
-  }
-}
-
-.main-header .logo-title .inner-logo-tittle .title-logo:before, .main-header .logo-title .inner-logo-tittle .title-logo:after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 5vh;
-  height: 5vh;
-  border-left: 5px solid #faab11;
-  border-bottom: 5px solid #faab11;
-}
-
-.main-header .logo-title .inner-logo-tittle .title-logo:before {
-  animation: logo-left 1500ms;
-  transform: translateX(-75%) rotate(45deg);
-}
-
-.main-header .logo-title .inner-logo-tittle .title-logo:after {
-  animation: logo-right 1500ms;
-  transform: translateX(100%) rotate(225deg);
 }
 
 .main-header .logo-title .inner-logo-tittle .title-main {
@@ -682,9 +640,15 @@
   font-weight: normal;
 }
 
+@media screen and (max-width: 1026px) and (min-width: 758px) {
+  .contact .contact-container h3 {
+    font-size: 1.5em;
+  }
+}
+
 @media screen and (max-width: 758px) {
   .contact .contact-container h3 {
-    font-size: 1.25em;
+    font-size: 1.15em;
     margin: 1em 0;
   }
 }
@@ -711,30 +675,6 @@
   }
   100% {
     transform: translateX(0);
-  }
-}
-
-@keyframes logo-left {
-  0% {
-    transform: translateX(-25%) rotate(45deg);
-  }
-  50% {
-    transform: translateX(-100%) rotate(45deg);
-  }
-  100% {
-    transform: translateX(-75%) rotate(45deg);
-  }
-}
-
-@keyframes logo-right {
-  0% {
-    transform: translateX(75%) rotate(225deg);
-  }
-  50% {
-    transform: translateX(125%) rotate(225deg);
-  }
-  100% {
-    transform: translateX(100%) rotate(225deg);
   }
 }
  

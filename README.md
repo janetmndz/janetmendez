@@ -1,12 +1,6 @@
 Janet's Web Portfolio
 =====================
-
 A redesign of my portfolio from the ground up
---------
-
-Timeline
----------
-* 2017.11.6 - uploaded main content
 
 To Do
 -------
