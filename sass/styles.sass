@@ -1,7 +1,7 @@
-@import 'mediaqueries'
-@import 'workssection'
 @import 'basevariable'
-
+@import 'mediaqueries'
+@import 'headerstyles'
+@import 'workssection'
 *
 	margin: 0
 	padding: 0
@@ -59,65 +59,65 @@
 		margin: 0 auto
 		padding: 15% 0  5% 0
 
-/*Main Header Styles*/
-.main-header
-	background: $header-color
-	.logo-image
-		width: 90%
-		height: 55vh
-		margin: 0 auto
-		background-image: url(../img/header1.png)
-		background-size: contain
-		background-position: top center
-		background-repeat: no-repeat
-		@include web
-			max-height: 1900px
-		@include tablet
-			height: 30vh
-			max-height: 450px
-		@include phone
-			height: 25vh
-			max-height: 300px
-			width: 100%
-	.logo-title
-		position: relative
-		width: 50%
-		margin: 0 auto
-		background: $header-color
-		padding: 3%
-		@include tablet
-			padding: 4%
-		@include phone
-			padding: 2%
-			width: 70%
-		.inner-logo-tittle
-			margin: 0 auto
-			width: 90%
-			@include tablet
-				width: 100%
-			@include phone
-				width: 100%
-			span
-				font-family: $main-font
-				display: block
-			.title-main
-				font-size: 4em
-				font-weight: 700
-				text-align: center
-				color: $orange-colortwo
-				@include tablet
-					font-size: 3em
-				@include phone
-					font-size: 1.5em
-			.title-sub
-				font-size: 1.5em
-				color: $white-color
-				text-align: center
-				text-transform: uppercase;
-				@include tablet
-					font-size: 1.5em
-				@include phone
-					font-size: 0.9em
+/*Main Header Styles
+// .main-header
+// 	background: $header-color
+// 	.logo-image
+// 		width: 90%
+// 		height: 55vh
+// 		margin: 0 auto
+// 		background-image: url(../img/header1.png)
+// 		background-size: contain
+// 		background-position: top center
+// 		background-repeat: no-repeat
+// 		@include web
+// 			max-height: 1900px
+// 		@include tablet
+// 			height: 30vh
+// 			max-height: 450px
+// 		@include phone
+// 			height: 25vh
+// 			max-height: 300px
+// 			width: 100%
+// 	.logo-title
+// 		position: relative
+// 		width: 50%
+// 		margin: 0 auto
+// 		background: $header-color
+// 		padding: 3%
+// 		@include tablet
+// 			padding: 4%
+// 		@include phone
+// 			padding: 2%
+// 			width: 70%
+// 		.inner-logo-tittle
+// 			margin: 0 auto
+// 			width: 90%
+// 			@include tablet
+// 				width: 100%
+// 			@include phone
+// 				width: 100%
+// 			span
+// 				font-family: $main-font
+// 				display: block
+// 			.title-main
+// 				font-size: 4em
+// 				font-weight: 700
+// 				text-align: center
+// 				color: $orange-colortwo
+// 				@include tablet
+// 					font-size: 3em
+// 				@include phone
+// 					font-size: 1.5em
+// 			.title-sub
+// 				font-size: 1.5em
+// 				color: $white-color
+// 				text-align: center
+// 				text-transform: uppercase;
+// 				@include tablet
+// 					font-size: 1.5em
+// 				@include phone
+// 					font-size: 0.9em*/
 
 /*About Section Styles*/
 .about
@@ -325,4 +325,3 @@
 // 		transform: translateX(150%) rotate(225deg)
 // 	100%
 // 		transform: translateX(125%) rotate(225deg)
-	

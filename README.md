@@ -4,7 +4,7 @@ A redesign of my portfolio from the ground up
 
 To Do
 -------
-- [ ] add links to projects
-- [ ] upload new images
+- [ ] edit a new about page
+- [ ] upload new images (compressed)
 - [ ] edit some responsive features
-- [ ] add a footer
+- [ ] upload new projects
