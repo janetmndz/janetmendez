@@ -28,11 +28,24 @@
   list-style: none;
 }
 
+@media screen and (max-width: 758px) {
+  .header__content .header__navigation > ul {
+    padding: 1rem 0;
+    width: 100%;
+  }
+}
+
 .header__content .header__navigation > ul a {
   color: inherit;
   text-decoration: none;
   font-size: 1.25em;
   font-weight: 500;
+}
+
+@media screen and (max-width: 758px) {
+  .header__content .header__navigation > ul a {
+    font-size: 1em;
+  }
 }
 
 .header__content .header__navigation > ul .navigation__item {
@@ -41,6 +54,12 @@
   cursor: pointer;
   margin: 0 2rem;
   padding: 0 0.5rem;
+}
+
+@media screen and (max-width: 758px) {
+  .header__content .header__navigation > ul .navigation__item {
+    margin: 0 1rem;
+  }
 }
 
 .header__content .header__navigation > ul .navigation__item::before {
@@ -79,6 +98,7 @@
 @media screen and (max-width: 758px) {
   .header__content .header__title {
     width: 100%;
+    padding: 2rem 0;
   }
 }
 
@@ -91,7 +111,7 @@
 
 @media screen and (max-width: 758px) {
   .header__content .header__title h1 {
-    font-size: 1.75em;
+    font-size: 1.6em;
   }
 }
 
@@ -105,7 +125,7 @@
 @media screen and (max-width: 758px) {
   .header__content .header__title p {
     font-size: 1em;
-    margin: .25rem 0 .5rem 0;
+    margin: .25rem .5rem .5rem .5rem;
   }
 }
 
@@ -268,8 +288,8 @@
   font-weight: 700;
   margin: 0 0 2rem 0;
   color: #8f3333;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+  -webkit-transform: translateX(-50%) translateY(0px);
+          transform: translateX(-50%) translateY(0px);
   -webkit-animation-name: bounce;
           animation-name: bounce;
   -webkit-animation-duration: 900ms;
@@ -285,6 +305,7 @@
   display: block;
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
   height: 2rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#F4C7B8), to(#FFF6F3));
@@ -353,23 +374,23 @@
 
 @-webkit-keyframes bounce {
   0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateX(-50%) translateY(0px);
+            transform: translateX(-50%) translateY(0px);
   }
   100% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    -webkit-transform: translateX(-50%) translateY(-10px);
+            transform: translateX(-50%) translateY(-10px);
   }
 }
 
 @keyframes bounce {
   0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateX(-50%) translateY(0px);
+            transform: translateX(-50%) translateY(0px);
   }
   100% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    -webkit-transform: translateX(-50%) translateY(-10px);
+            transform: translateX(-50%) translateY(-10px);
   }
 }
 
