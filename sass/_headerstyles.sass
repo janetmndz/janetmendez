@@ -2,22 +2,26 @@
 	background-color: $header-color2
 	height: 100vh
 	+phone
-		height: 98vh
+		height: 90vh
+	.header__navigation
+		width: 85%
+		margin: 0 auto
 	.header__navigation > ul
 		display: flex
 		align-items: center
-		justify-content: flex-end
-		width: 85%
-		margin: 0 auto
-		padding: 2.5rem
+		justify-content: space-around
+		width: 35%
+		padding: 2rem
 		list-style: none
+		float: right
 		+phone
 			padding: 1rem 0
 			width: 100%
 		a
 			color: inherit
 			text-decoration: none
-			font-size: 1.25em
+			font-family: $sub-font
+			font-size: 1.15em
 			font-weight: 500
 			+phone
 				font-size: 1em
@@ -52,9 +56,10 @@
 		margin: 0 auto
 		padding: 1rem 0 3rem 0
 		text-align: center
+		clear: both
 		@include phone
 			width: 100%
-			padding: 4rem 0
+			padding: 4rem 0 3rem 0
 		h1 
 			font-size: 3em
 			line-height: 2.5
@@ -109,6 +114,8 @@
 		animation-duration: 900ms
 		animation-iteration-count: infinite
 		animation-direction: alternate
+		+phone
+			margin: 0 0 4rem 0
 	&::after
 		content: ""
 		display: block
