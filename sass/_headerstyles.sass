@@ -1,6 +1,8 @@
 .header__content
 	background-color: $header-color2
 	height: 100vh
+	+tablet
+		height: 97vh
 	+phone
 		height: 90vh
 	.header__navigation
@@ -14,8 +16,11 @@
 		padding: 2rem
 		list-style: none
 		float: right
+		+tablet
+			padding: 1.5rem 0
+			width: 100%
 		+phone
-			padding: 1rem 0
+			padding: 1.25rem 0
 			width: 100%
 		a
 			color: inherit
@@ -31,6 +36,8 @@
 			cursor: pointer
 			margin: 0 2rem
 			padding: 0 0.5rem
+			+tablet
+				margin: 0 0.75rem
 			+phone
 				margin: 0 1rem
 			&::before
@@ -44,9 +51,8 @@
 				background-image: linear-gradient(180deg, transparent 65%, rgba(234, 82, 82, 0.5) 0)
 				background-size: 100% 100%
 				transition: width 300ms ease-in-out
-			&:hover
-				&::before
-					width: 100%
+			&:hover::before
+				width: 100%
 		.name
 			color: rgba(0,0,0,0.7)
 			align-self: flex-start
@@ -57,7 +63,7 @@
 		padding: 1rem 0 3rem 0
 		text-align: center
 		clear: both
-		@include phone
+		+phone
 			width: 100%
 			padding: 4rem 0 3rem 0
 		h1 
@@ -65,14 +71,14 @@
 			line-height: 2.5
 			font-weight: 500
 			margin: 0
-			@include phone
+			+phone
 				font-size: 1.6em
 		p
 			font-size: 1.25em
 			font-weight: 500
 			line-height: 1.25
 			color: $darkred-color
-			@include phone
+			+phone
 				font-size: 1em
 				padding: 0 5%
 				margin: .25rem .5rem .5rem .5rem
@@ -85,7 +91,10 @@
 		width: 100%
 		height: auto
 		max-height: 275px
-		@include phone
+		+tablet
+			padding: 0 7%
+			width: 100%
+		+phone
 			padding: 0 5%
 			width: 100%
 		#code > path

@@ -106,6 +106,12 @@
   height: 100vh;
 }
 
+@media screen and (max-width: 1026px) and (min-width: 758px) {
+  .header__content {
+    height: 97vh;
+  }
+}
+
 @media screen and (max-width: 758px) {
   .header__content {
     height: 90vh;
@@ -132,9 +138,16 @@
   float: right;
 }
 
+@media screen and (max-width: 1026px) and (min-width: 758px) {
+  .header__content .header__navigation > ul {
+    padding: 1.5rem 0;
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 758px) {
   .header__content .header__navigation > ul {
-    padding: 1rem 0;
+    padding: 1.25rem 0;
     width: 100%;
   }
 }
@@ -159,6 +172,12 @@
   cursor: pointer;
   margin: 0 2rem;
   padding: 0 0.5rem;
+}
+
+@media screen and (max-width: 1026px) and (min-width: 758px) {
+  .header__content .header__navigation > ul .navigation__item {
+    margin: 0 0.75rem;
+  }
 }
 
 @media screen and (max-width: 758px) {
@@ -248,6 +267,13 @@
   width: 100%;
   height: auto;
   max-height: 275px;
+}
+
+@media screen and (max-width: 1026px) and (min-width: 758px) {
+  .header__content .header__svg {
+    padding: 0 7%;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 758px) {
@@ -533,14 +559,10 @@
   }
 }
 
-#work {
-  background: #fbf5e4;
-}
-
 .work-container {
-  width: 80%;
+  width: 75%;
   height: 100%;
-  min-height: 500px;
+  min-height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -565,7 +587,7 @@
 
 .work-container .project-single {
   min-height: 300px;
-  padding: 2em;
+  padding: 1.25rem;
 }
 
 @media screen and (min-width: 1026px) {
@@ -583,99 +605,58 @@
 @media screen and (max-width: 758px) {
   .work-container .project-single {
     padding: 1em;
-    min-height: 250px;
+    min-height: 200px;
   }
 }
 
 .work-container .project-single .image-hold {
   max-width: 100%;
-  height: 100%;
   position: relative;
 }
 
 .work-container .project-single .image-hold img {
   display: block;
-  min-width: 250px;
-  max-width: 100%;
-  min-height: 250px;
-  max-height: 100%;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 758px) {
   .work-container .project-single .image-hold img {
-    min-width: 200px;
     width: 200px;
-    min-height: 200px;
     height: 200px;
   }
-}
-
-.work-container .project-single .image-hold .image-overlay {
-  position: absolute;
-  min-width: 250px;
-  width: 100%;
-  min-height: 250px;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-
-@media screen and (max-width: 758px) {
-  .work-container .project-single .image-hold .image-overlay {
-    min-width: 200px;
-    width: 200px;
-    min-height: 200px;
-    height: 200px;
-  }
-}
-
-.work-container .project-single .image-hold .image-overlay .description {
-  opacity: 0;
 }
 
 .work-container .project-single .image-hold:hover img {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-box-shadow: 5px 5px 10px 3px rgba(162, 162, 162, 0.5);
-          box-shadow: 5px 5px 10px 3px rgba(162, 162, 162, 0.5);
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
 }
 
-.work-container .project-single .image-hold:hover .image-overlay {
-  cursor: pointer;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  background: rgba(239, 121, 97, 0.9);
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
+.work-container .project-single .image-hold a:focus img {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
+  outline: 2px solid rgba(143, 51, 51, 0.7);
 }
 
-.work-container .project-single .image-hold:hover .image-overlay .description {
-  -webkit-transition: all 750ms ease-in-out;
-  transition: all 750ms ease-in-out;
-  opacity: 1;
-  margin: 0 auto;
-  width: 75%;
-  text-align: center;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  margin-top: 50%;
+.work-container .project-single .description {
+  padding: 0.75rem 0;
 }
 
-.work-container .project-single .image-hold:hover .image-overlay .description h3 {
-  font-size: 2em;
-  padding-bottom: 3px;
-  text-transform: lowercase;
-  color: #f1c40e;
+.work-container .project-single .description h3 {
+  font-family: "Exo", sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.5;
 }
 
-.work-container .project-single .image-hold:hover .image-overlay .description p {
-  font-size: 1em;
-  line-height: 1.5em;
-  text-transform: uppercase;
-  color: #ffffff;
+.work-container .project-single .description p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.15;
 }
 
 .contact-container {
@@ -728,6 +709,12 @@
   background-size: 100% 100%;
   -webkit-transition: width 300ms ease-in-out;
   transition: width 300ms ease-in-out;
+}
+
+@media screen and (max-width: 758px) {
+  .contact-container h3 a::before {
+    width: 100%;
+  }
 }
 
 .contact-container h3 a:hover::before, .contact-container h3 a:focus::before {

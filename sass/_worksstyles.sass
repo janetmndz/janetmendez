@@ -1,84 +1,50 @@
-@import 'mediaqueries'
-
-#work
-    background: $section-color
-
 .work-container
-    width: 80%
+    width: 75%
     height: 100%
-    min-height: 500px
+    min-height: 300px
     display: flex
     flex-direction: row
     flex-wrap: wrap
     justify-content: flex-start
-    @include phone
+    +phone
         justify-content: center
     .project-single
         min-height: 300px
-        padding: 2em
-        @include web
+        padding: 1.25rem
+        +web
             width: 33.3%
-        @include tablet 
+        +tablet 
             width: 50%
-        @include phone
+        +phone
             padding: 1em
-            min-height: 250px
+            min-height: 200px
         .image-hold
             max-width: 100%
-            height: 100%
             position: relative
             img 
                 display: block
-                min-width: 250px
-                max-width: 100%
-                min-height: 250px
-                max-height: 100%
-                @include phone
-                    min-width: 200px
+                width: 250px
+                height: 250px
+                cursor: pointer
+                +phone
                     width: 200px
-                    min-height: 200px
                     height: 200px
-            .image-overlay
-                position: absolute;
-                min-width: 250px
-                width: 100%
-                min-height: 250px
-                height: 100%
-                top: 0
-                left: 0
-                z-index: 100
-                @include phone
-                    min-width: 200px
-                    width: 200px
-                    min-height: 200px
-                    height: 200px
-                .description
-                    opacity: 0
             &:hover
                 img 
-                    transform: scale(1.05)
-                    box-shadow: 5px 5px 10px 3px rgba(162, 162, 162, 0.5)
-                    transition: all 500ms ease-in-out
-                .image-overlay
-                    cursor: pointer
-                    transform: scale(1.05)
-                    background: rgba(239, 121, 97, 0.9)
-                    transition: all 500ms ease-in-out
-                    .description
-                        transition: all 750ms ease-in-out
-                        opacity: 1
-                        margin: 0 auto
-                        width: 75%
-                        text-align: center
-                        transform: translateY(-50%)
-                        margin-top: 50%
-                        h3 
-                            font-size: 2em
-                            padding-bottom: 3px
-                            text-transform: lowercase
-                            color: #f1c40e
-                        p
-                            font-size: 1em
-                            line-height: 1.5em
-                            text-transform: uppercase
-                            color: #ffffff
+                    transform: scale(0.9)
+                    transition: all 800ms ease-in-out
+            a:focus
+                img 
+                    transform: scale(0.9)
+                    transition: all 800ms ease-in-out
+                    outline: 2px solid transparentize($darkred-color, 0.3)
+        .description
+            padding: 0.75rem 0 
+            h3
+                font-family: $sub-font
+                font-size: 1.15rem
+                line-height: 1.5
+            p
+                font-family: $main-font
+                font-size: 1rem
+                line-height: 1.15
