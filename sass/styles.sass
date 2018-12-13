@@ -1,8 +1,6 @@
 @import 'basevariable'
 @import 'mediaqueries'
-@import 'headerstyles'
-@import 'workssection'
-@import 'footerstyles'
+
 *
 	margin: 0
 	padding: 0
@@ -15,6 +13,7 @@
 	width: 100%
 	margin: 0 auto
 	position: relative
+	background-color: $section-color
 	.content-section-header
 		width: 90%
 		margin: 0 auto
@@ -62,223 +61,10 @@
 		margin: 0 auto
 		padding: 15% 0  5% 0
 
-/*Main Header Styles
-// .main-header
-// 	background: $header-color
-// 	.logo-image
-// 		width: 90%
-// 		height: 55vh
-// 		margin: 0 auto
-// 		background-image: url(../img/header1.png)
-// 		background-size: contain
-// 		background-position: top center
-// 		background-repeat: no-repeat
-// 		@include web
-// 			max-height: 1900px
-// 		@include tablet
-// 			height: 30vh
-// 			max-height: 450px
-// 		@include phone
-// 			height: 25vh
-// 			max-height: 300px
-// 			width: 100%
-// 	.logo-title
-// 		position: relative
-// 		width: 50%
-// 		margin: 0 auto
-// 		background: $header-color
-// 		padding: 3%
-// 		@include tablet
-// 			padding: 4%
-// 		@include phone
-// 			padding: 2%
-// 			width: 70%
-// 		.inner-logo-tittle
-// 			margin: 0 auto
-// 			width: 90%
-// 			@include tablet
-// 				width: 100%
-// 			@include phone
-// 				width: 100%
-// 			span
-// 				font-family: $main-font
-// 				display: block
-// 			.title-main
-// 				font-size: 4em
-// 				font-weight: 700
-// 				text-align: center
-// 				color: $orange-colortwo
-// 				@include tablet
-// 					font-size: 3em
-// 				@include phone
-// 					font-size: 1.5em
-// 			.title-sub
-// 				font-size: 1.5em
-// 				color: $white-color
-// 				text-align: center
-// 				text-transform: uppercase;
-// 				@include tablet
-// 					font-size: 1.5em
-// 				@include phone
-// 					font-size: 0.9em*/
-
-/*About Section Styles*/
-.about
-	.content-section-header
-		animation: enter-left 1500ms 
-	.content-inner-section
-		width: 75%
-		height: auto
-		.top-about
-			display: block
-			width: 100%
-			margin: 3em auto
-			@include web 
-				padding: 0 5% 5% 5%
-				min-height: 50vh
-		.top-about
-			.about-inner
-				display: flex
-				flex-direction: row
-				align-items: center
-				align-content: center
-				@include phone
-					flex-direction: column
-			img, .about-info
-				max-width: 50%
-				max-height: 75%
-				padding: 2em
-				background-color: grayscale($white-color)
-				@include phone
-					max-width: 100%
-					max-height: none
-			img
-				border: 10px solid white
-				border-bottom: 50px solid white
-				box-shadow: 5px 5px 10px 0px rgba(37, 37, 37, 0.56)
-				@include web
-					flex: 1 0 0
-					margin-right: 15%
-				@include tablet 
-					margin-right: 10%
-				@include phone
-					width: 60%
-					min-height: 200px 
-			.about-info
-				@include web
-					flex: 2 0 0
-				@include phone
-					margin-top: 2em
-			.about-info p
-				line-height: 1.5em
-				@include web
-					font-size: 1.15em
-				@include tablet
-					font-size: 1em
-				@include phone
-					font-size: .87em
-		.middle-about
-			width: 60%
-			margin: 0 auto
-			ul
-				display: flex
-				flex-direction: row
-				align-items: center
-				align-content: center
-				justify-content: center
-				list-style: none
-			a
-				text-decoration: none
-				color: inherit
-				&:hover
-					li
-						transform: scale(1.15)
-						background-color: $orange-colortwo
-			li 
-				width: 50px
-				height: 50px
-				border-radius: 50%
-				background-color: lighten($black-color, 25%)
-				margin: 0px .5em
-				position: relative
-				transition: 500ms ease all
-				@include phone
-					width: 40px
-					height: 40px
-				img 
-					width: 25px
-					position: absolute
-					top: 50%
-					left: 50%	
-					transform: translateX(-50%) translateY(-50%)
-					@include phone
-						width: 20px
-		.bottom-about
-			margin: 3em 0 0 0
-			.about-inner
-				max-width: 800px
-				min-width: 250px
-				margin: 0 auto
-				h3 
-					font-size: 1.5em
-					color: rgba(73, 73, 73, 0.3)
-					text-transform: uppercase
-					@include phone
-						font-size: 1.25em
-				.skill-set
-					list-style: none
-					display: flex
-					flex-direction: row
-					align-items: flex-start
-					flex-wrap: wrap
-					padding-bottom: 1.5em
-					.progress
-						position: relative
-						padding: 1em
-						font-size: 1em
-						@include web 
-							width: 33.3%
-						@include tablet 
-							width: 50%
-						@include phone
-							font-size: .875em
-							width: 50%
-							text-align: center
-							padding: 1em .5em
-						&::after, &::before
-							content: ''
-							position: absolute
-							display: block
-							height: 10px
-							right: 0
-							background: #FFF
-							border: 1px solid rgba(128, 128, 128, 0.3)
-							@include web
-								top: 50%
-							@include tablet
-								top: 40%
-							@include phone
-								bottom: 0
-								right: 33.3%
-						&::after
-							width: 25%
-							@include phone
-								width: 33%
-						&::before
-							background: #FFF
-							z-index: 10
-					.adv::after
-						background: #61ef79
-					.int::after
-						background: #efc061
-					.beg::after
-						background: #ef7961
-					.adv::before
-						width: 2%
-					.int::before
-						width: 7%
-					.beg::before
-						width: 13%
+@import 'headerstyles'
+@import 'aboutstyles'
+@import 'workssection'
+@import 'footerstyles'
 
 .contact
 	.contact-container
