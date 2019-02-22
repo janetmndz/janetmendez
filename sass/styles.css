@@ -1,5 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700");
-@import url("https://fonts.googleapis.com/css?family=Exo");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500");
+@import url("https://fonts.googleapis.com/css?family=Exo:400,500");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500");
+@import url("https://fonts.googleapis.com/css?family=Exo:400,500");
 * {
   margin: 0;
   padding: 0;
@@ -17,14 +19,14 @@
 }
 
 *:focus {
-  outline: 2px solid rgba(143, 51, 51, 0.7);
+  outline: 2px solid rgba(143, 51, 51, 0.75);
 }
 
 .content-section {
   width: 100%;
   margin: 0 auto;
   position: relative;
-  background-color: #fbf5e4;
+  background-color: #ffffff;
 }
 
 .content-section .content-section-header {
@@ -52,8 +54,9 @@
 }
 
 .content-section .content-section-header .section-number {
-  color: rgba(234, 82, 82, 0.5);
+  color: rgba(234, 82, 82, 0.85);
   font-weight: 600;
+  text-shadow: 3px 3px 0px #cecece;
 }
 
 @media screen and (min-width: 1026px) {
@@ -152,20 +155,6 @@
   }
 }
 
-.header__content .header__navigation > ul a {
-  color: inherit;
-  text-decoration: none;
-  font-family: "Exo", sans-serif;
-  font-size: 1.15em;
-  font-weight: 500;
-}
-
-@media screen and (max-width: 758px) {
-  .header__content .header__navigation > ul a {
-    font-size: 1em;
-  }
-}
-
 .header__content .header__navigation > ul .navigation__item {
   position: relative;
   text-align: center;
@@ -203,6 +192,20 @@
 
 .header__content .header__navigation > ul .navigation__item:hover::before {
   width: 100%;
+}
+
+.header__content .header__navigation > ul .navigation__item a {
+  color: inherit;
+  text-decoration: none;
+  font-family: "Exo", sans-serif;
+  font-size: 1.15em;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 758px) {
+  .header__content .header__navigation > ul .navigation__item a {
+    font-size: 1em;
+  }
 }
 
 .header__content .header__navigation > ul .name {
@@ -448,8 +451,8 @@
   left: 0;
   width: 100%;
   height: 2rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#F4C7B8), to(#fbf5e4));
-  background: linear-gradient(#F4C7B8, #fbf5e4);
+  background: -webkit-gradient(linear, left top, left bottom, from(#F4C7B8), to(#ffffff));
+  background: linear-gradient(#F4C7B8, #ffffff);
 }
 
 @-webkit-keyframes load-code {
@@ -648,7 +651,7 @@
   padding: 0.75rem 0;
 }
 
-.work-container .project-single .description h3 {
+.work-container .project-single .description h1 {
   font-family: "Exo", sans-serif;
   font-size: 1.15rem;
   line-height: 1.5;
@@ -671,33 +674,33 @@
   }
 }
 
-.contact-container h3 {
+.contact-container h1 {
   line-height: 1.5em;
   font-size: 2em;
   font-weight: normal;
 }
 
 @media screen and (max-width: 1026px) and (min-width: 758px) {
-  .contact-container h3 {
+  .contact-container h1 {
     font-size: 1.5em;
   }
 }
 
 @media screen and (max-width: 758px) {
-  .contact-container h3 {
+  .contact-container h1 {
     font-size: 1.15em;
     margin: 1em 0;
   }
 }
 
-.contact-container h3 a {
+.contact-container h1 a {
   position: relative;
   text-decoration: none;
   font-weight: 600;
   color: #333333;
 }
 
-.contact-container h3 a::before {
+.contact-container h1 a::before {
   content: "";
   display: block;
   position: absolute;
@@ -713,18 +716,28 @@
 }
 
 @media screen and (max-width: 758px) {
-  .contact-container h3 a::before {
+  .contact-container h1 a::before {
     width: 100%;
   }
 }
 
-.contact-container h3 a:hover::before, .contact-container h3 a:focus::before {
+.contact-container h1 a:hover::before, .contact-container h1 a:focus::before {
   width: 100%;
 }
 
 footer {
   background: #333333;
   padding: 0.75rem;
+}
+
+footer p {
+  line-height: 1.5;
+  font-size: 1.15rem;
+  color: #ffece7;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem 0;
 }
 
 footer .social__icons {
@@ -745,14 +758,14 @@ footer .social__icons {
   list-style: none;
 }
 
-footer .social__icons .icons {
+footer .social__icons li a.icons {
   display: block;
-  padding: 1.5rem;
+  padding: 1rem 1.25rem;
 }
 
-footer .social__icons .icons li i.fab {
+footer .social__icons li a.icons i.fab {
   font-size: 1.5rem;
   text-decoration: none;
-  color: #ea5252;
+  color: rgba(234, 82, 82, 0.85);
 }
 /*# sourceMappingURL=styles.css.map */

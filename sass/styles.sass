@@ -9,7 +9,7 @@
 	&::selection
 		background: transparentize($header-color, 0.3)
 	&:focus
-		outline: 2px solid transparentize($darkred-color, 0.3)
+		outline: 2px solid transparentize($darkred-color, 0.25)
 		
 .content-section
 	width: 100%
@@ -30,8 +30,9 @@
 			display: block
 			position: relative
 		.section-number
-			color: rgba(234, 82, 82, 0.5)
+			color: rgba(234, 82, 82, 0.85)
 			font-weight: 600
+			text-shadow: 3px 3px 0px #cecece
 			+web
 				font-size: 4.5em
 			+tablet

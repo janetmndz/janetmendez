@@ -1,6 +1,15 @@
+@import 'basevariable'
 footer
     background: $black-color
     padding: 0.75rem
+    p
+        line-height: 1.5
+        font-size: 1.15rem
+        color: $white-color
+        font-family: $main-font
+        font-weight: 500
+        text-align: center
+        padding: 1rem 0
     .social__icons
         width: 50%
         margin: 0 auto
@@ -9,10 +18,10 @@ footer
         justify-content: center
         align-content: space-between
         list-style: none
-        .icons
+        li a.icons
             display: block
-            padding: 1.5rem
-            li i.fab
+            padding: 1rem 1.25rem
+            i.fab
                 font-size: 1.5rem
                 text-decoration: none
-                color: rgb(234, 82, 82)
+                color: rgba(234, 82, 82, 0.85)
